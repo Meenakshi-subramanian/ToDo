@@ -1,0 +1,6 @@
+Database - MongoDB is hosted in mlab
+Server   - cd ToDoAPI
+           node app.js
+Frontend - cd ToDoUI
+           npm install
+           ng serve --open
