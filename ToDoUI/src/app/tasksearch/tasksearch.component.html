@@ -1,0 +1,29 @@
+<!-- Search By
+   <select ng-model="columns" ng-options="e for e in headers">
+       <option value=""></option>
+   </select> -->
+
+   <!--BIND THE SEARCH BOX TO THE SELECT ELEMENT-->
+<div class="col-sm-4">
+<input class="new-task" type="text" (input)="onSearchTitle($event.target.value)" placeholder="Title">
+</div>
+<div class="col-sm-4">
+<input class="new-task" type="text" (input)="onSearchDesc($event.target.value)" placeholder="Description">
+</div>
+<div class="col-sm-4">
+<input class="new-task" type="text" (input)="onSearchDate($event.target.value)" placeholder="Date">
+</div>
+<table class="tasktable">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Date</th>
+  </tr>
+<tr *ngFor="let task of filteredtasks">
+  <td>{{task.title}}</td>
+  <td>{{task.description}}</td>
+  <td>{{task.date | date :'M/dd/yyyy'}}</td>
+
+
+</tr>
+</table>

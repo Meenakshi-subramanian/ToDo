@@ -1,0 +1,26 @@
+<h2>What needs to be done?</h2>
+<!-- <div> <input [(ngModel)]="task.title" placeholder="What should be done?"></div> -->
+<div class="col-sm-4">
+<input class="new-task " id="taskTitle" placeholder="Title?" autofocus="" [(ngModel)]="newtask.title" >
+</div>
+<div class="col-sm-4">
+<input class="new-task" id="taskDesc" placeholder="Describe?" autofocus="" [(ngModel)]="newtask.description">
+</div>
+<div class="col-sm-4">
+<input class="new-task" id="taskDate" placeholder="When?(mm/dd/yyyy)" autofocus="" [(ngModel)]="newtask.date" (keyup.enter)="onAddTodo()">
+</div>
+
+<ul class="task" style="list-style: none;">
+  <li *ngFor="let task of tasks" [class.completed]="task.status">
+    <div class="view">
+        <div class="input">
+          <input class="toggle" type="checkbox" (click)="  onToggleTodoComplete(task)" [checked]="task.status">
+          </div>
+          <div class="tasks">
+          <h3>{{task.title}}</h3><span> {{task.description}}</span>
+          </div>
+          <!-- <button class="destroy" (click)="removeTodo(todo)"></button> -->
+        </div>
+
+  </li>
+</ul>

@@ -1,0 +1,25 @@
+
+
+  <table class="completed">
+    <tr><th>Completed</th></tr>
+  <ng-container class="completed" *ngFor="let task of tasks" >
+
+  <tr *ngIf="task.status" >
+    <td>{{task.title}}</td>
+          <!-- <button class="destroy" (click)="removeTodo(todo)"></button> -->
+  </tr>
+</ng-container>
+
+</table>
+
+<table class="not-completed">
+  <tr><th>Yet to complete</th></tr>
+<ng-container class="not-completed" *ngFor="let task of tasks" >
+
+<tr *ngIf="!task.status" >
+  <td>{{task.title}}</td>
+        <!-- <button class="destroy" (click)="removeTodo(todo)"></button> -->
+</tr>
+</ng-container>
+
+</table>

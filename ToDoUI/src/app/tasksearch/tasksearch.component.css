@@ -1,0 +1,50 @@
+.new-task {
+	padding: 16px 16px 16px 60px;
+	border: none;
+	background: rgba(0, 0, 0, 0.003);
+	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+.new-task,
+.edit {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	font-size: 20px;
+	font-family:  "Comic Sans MS", sans-serif;
+	font-weight: inherit;
+	line-height: 1.4em;
+	border: 0;
+	color: inherit;
+	padding: 6px;
+	border: 1px solid #999;
+	box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.tasktable {
+    font-family: "Comic Sans MS", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+text-transform: capitalize;
+}
+
+.tasktable  td, .tasktable  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+}
+/*
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;} */
+
+.tasktable  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+		text-transform: uppercase;
+}
